@@ -1,0 +1,149 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+
+body {
+    margin: 0px;
+}
+
+.header {
+    background-color:#323232;
+    height: 80px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+&__name {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+      
+      a {
+        text-decoration: none;
+        color: $primary-text-color;
+        text-transform: uppercase;
+      }
+       
+   }
+
+&__nav { 
+    width: 100%;
+    display: flex;
+
+   &--link {
+       width: 50%;
+       display: flex;
+       justify-content: center;
+   }
+
+   a {
+    color: $primary-text-color;
+    text-decoration: none;
+   }
+   
+}
+
+}
+
+// .hero__iamge starts.....
+
+.homepage__hero {
+    background-image: url(../image/hero.jpg);
+    width: 100%;
+    height: 183px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+        color: $primary-text-color;
+        margin: 0;
+        padding: 1rem;
+        @include fontSize(24px, bold);
+        // line-height: 32px;
+    }
+}
+
+
+// .homepage__musicians starts....
+
+.homepage__musicians {
+    box-sizing: border-box;
+    padding: 2rem 1rem 2.5rem 1rem;
+
+
+&__header {
+    margin: 0;
+}
+
+&__image {
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+&__description {
+    @include fontSize(13px, bold);
+    // line-height: 18px;
+    
+    &--bottom {
+        padding-top: 2rem;
+        padding-bottom: 2.5rem;
+    }
+}
+
+&__text--title {
+   @include fontSize(14px, bold, 22px);
+   
+}
+
+&__text--top {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    @include fontSize(13px);
+
+}
+
+&__text--bottom {
+    @include fontSize(13px);
+    
+}
+
+}
+
+
+// .homepage__photo-gallery starts....
+
+.homepage__photo-gallery {
+    box-sizing: border-box;
+    padding: 2rem 1rem 1.5rem 1rem;
+    @include backgroundColor(#FAFAFA);
+
+    img {
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+
+    h1 {
+        margin: 0px;
+        padding-bottom: 1.5rem;
+    }
+}
+
+
+// footer
+
+footer {
+    padding: 3rem 1rem 2rem 1rem;
+    @include backgroundColor(#323232);
+    color:$primary-text-color;
+    
+    img {
+        width: 1rem;
+        
+    }
+
+
+
+}
