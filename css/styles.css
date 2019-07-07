@@ -79,7 +79,7 @@ body {
 @media (min-width: 768px) and (max-width: 1439px) {
   .header__name {
     margin-left: 1.5rem;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
   }
 }
 
@@ -116,9 +116,31 @@ body {
   border-bottom: 4px solid #fff;
 }
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  .header__nav--link {
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .header__nav--link a {
   color: #fff;
   text-decoration: none;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .header__nav--link a {
+    max-height: 20px;
+  }
 }
 
 .homepage {
@@ -339,11 +361,46 @@ body {
           flex-direction: column;
 }
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  .footer {
+    padding: 1rem 1.5rem 2rem 1.5rem;
+  }
+}
+
 .footer h1 {
   font-family: "Avenir-bold";
-  font-size: 32px;
+  font-size: 24px;
   font-weight: normal;
   line-height: 32px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .footer h1 {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 32px;
+  }
+}
+
+.footer__title--logo {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .footer__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer__title--logo {
+    display: block;
+  }
 }
 
 .footer__icons {
@@ -356,6 +413,12 @@ body {
           justify-content: space-between;
 }
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  .footer__icons {
+    width: 20%;
+  }
+}
+
 .footer__icons img {
   height: 1rem;
 }
@@ -365,6 +428,21 @@ body {
   font-weight: normal;
   line-height: 18px;
   margin-top: 2rem;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .footer__contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .footer__contact h4 {
@@ -384,5 +462,16 @@ body {
   font-size: 13px;
   font-weight: normal;
   line-height: 18px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .footer__copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

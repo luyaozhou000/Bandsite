@@ -50,7 +50,7 @@ body {
     margin-bottom: 1rem;
     @media (min-width: 768px) and (max-width:1439px) {
         margin-left: 1.5rem;
-        margin-right: 1rem;
+        margin-right: 1.5rem;
     }
     
       a {
@@ -66,6 +66,7 @@ body {
 
     @media (min-width: 768px) and (max-width:1439px) {
         width: 30%;    
+       
     }
    }
 }
@@ -78,14 +79,21 @@ body {
        &:hover {
         border-bottom: 4px solid #fff;   
         }
+
         @media (min-width: 768px) and (max-width:1439px) {
-        
-        // need to fix this later!!!
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;    
         }
-   
+       
+    
    a {
     color: $primary-text-color;
     text-decoration: none;  
+    @media (min-width: 768px) and (max-width:1439px) {
+        max-height: 20px;
+    }
     }
     
 }
@@ -251,17 +259,39 @@ body {
     color:$primary-text-color;
     display: flex;
     flex-direction: column;
+    @media (min-width: 768px) and (max-width:1439px) {
+        padding: 1rem 1.5rem 2rem 1.5rem;
+    }
    
-    
     h1 {
         font-family: "Avenir-bold";
-        @include fontSize(32px,'normal', 32px);
+        @include fontSize(24px,'normal', 32px);
+        @media (min-width: 768px) and (max-width:1439px) {
+            @include fontSize(36px, 'normal', 32px);
+        }
+    }
+
+    &__title {
+        &--logo {
+            display: none;
+        }
+        @media (min-width: 768px) and (max-width:1439px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &--logo {
+                display: block;
+            }
+        }
     }
     
     &__icons {
         width: 40%;
         display: flex;
         justify-content: space-between;
+        @media (min-width: 768px) and (max-width:1439px) {
+            width: 20%;
+        }
 
         img {
             height: 1rem;    
@@ -271,6 +301,12 @@ body {
     &__contact {
         @include fontSize(13px);
         margin-top: 2rem;
+        @media (min-width: 768px) and (max-width:1439px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+    
+        }
 
         h4 {
             margin: 0;
@@ -287,6 +323,10 @@ body {
 
     &__copyright {
         @include fontSize(13px);
+        @media (min-width: 768px) and (max-width:1439px) {
+            display: flex;
+            justify-content: flex-start;
+        }
     }
     
 }
