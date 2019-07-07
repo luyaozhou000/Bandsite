@@ -1,6 +1,24 @@
 @import 'variables.scss';
 @import 'mixins.scss';
 
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/AvenirNextProLt/Linotype - AvenirNextLTPro-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Avenir-heavy';
+    src: url('../fonts/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Heavy.otf') format('opentype');
+}
+
+@font-face {
+    font-family:  'Avenir-bold';
+    src: url('../fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf') format('opentype');
+}
+
+* {
+    font-family: 'Avenir';
+}
 
 body {
     margin: 0px;
@@ -13,40 +31,72 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+
+     @media (min-width: 768px) and (max-width:1439px) {
+        flex-direction: row;
+        justify-content: flex-start; 
+        align-items: center;
+    }
+
+    @media (min-width: 1440px) {
+        flex-direction: row;
+        justify-content: flex-start; 
+        align-items: center;
+    }
 
 &__name {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    @media (min-width: 768px) and (max-width:1439px) {
+        margin-left: 1.5rem;
+        margin-right: 1rem;
+    }
     
-      
       a {
         text-decoration: none;
         color: $primary-text-color;
         text-transform: uppercase;
-      }
-       
+      }   
    }
 
 &__nav { 
     width: 100%;
     display: flex;
 
-   &--link {
+    @media (min-width: 768px) and (max-width:1439px) {
+        width: 30%;    
+    }
+   }
+}
+
+
+.header__nav--link {
        width: 50%;
        display: flex;
        justify-content: center;
-   }
-
+       &:hover {
+        border-bottom: 4px solid #fff;   
+        }
+        @media (min-width: 768px) and (max-width:1439px) {
+        
+        // need to fix this later!!!
+        }
+   
    a {
     color: $primary-text-color;
-    text-decoration: none;
-   }
-   
+    text-decoration: none;  
+    }
+    
 }
 
-}
 
-// .hero__iamge starts.....
+
+// homepage starts.....
+
+.homepage {
+    color: #323232;
+}
 
 .homepage__hero {
     background-image: url(../image/hero.jpg);
@@ -57,12 +107,21 @@ body {
     flex-direction: column;
     justify-content: center;
 
+    @media (min-width: 768px) and (max-width:1439px) {
+        height: 400px;
+    }
+
     h2 {
         color: $primary-text-color;
+        font-family: "Avenir-bold";
         margin: 0;
-        padding: 1rem;
-        @include fontSize(24px, bold);
-        // line-height: 32px;
+        padding: 0 1rem;
+        @include fontSize(24px,'normal', 32px);
+        
+        @media (min-width: 768px) and (max-width:1439px) {
+            padding: 0 1.5rem;
+            @include fontSize(60px, 'normal', 68px);
+        }
     }
 }
 
@@ -72,29 +131,52 @@ body {
 .homepage__musicians {
     box-sizing: border-box;
     padding: 2rem 1rem 2.5rem 1rem;
-
+    @media (min-width: 768px) and (max-width:1439px) {
+        padding: 2rem 1.5rem 2.5rem 1.5rem;
+    }
 
 &__header {
     margin: 0;
+    font-family: "Avenir-bold";
+    @media (min-width: 768px) and (max-width:1439px) {
+        @include fontSize(36px,'normal', 44px);
+    }
 }
 
 &__image {
     width: 100%;
     margin: 1.5rem 0;
-}
-
-&__description {
-    @include fontSize(13px, bold);
-    // line-height: 18px;
-    
-    &--bottom {
-        padding-top: 2rem;
-        padding-bottom: 2.5rem;
+    @media (min-width: 768px) and (max-width:1439px) {
+        height: 362px;
     }
 }
 
+&__description {
+   
+   &--top {
+    font-family: "Avenir-bold";
+    color: #323232;
+    @include fontSize(13px);
+    @media (min-width: 768px) and (max-width:1439px) {
+        @include fontSize(16px, 'normal',24px);
+        text-align: left;
+    }
+
+   }
+
+   &--bottom {
+        font-family: "Avenir-bold";
+        padding-top: 2rem;
+        padding-bottom: 2.5rem;
+        @include fontSize(13px);
+   }
+}
+
 &__text--title {
-   @include fontSize(14px, bold, 22px);
+    font-family: "Avenir-bold";
+    @media (min-width: 768px) and (max-width:1439px) {
+        @include fontSize(16px, 'normal',24px);
+    }    
    
 }
 
@@ -102,48 +184,109 @@ body {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     @include fontSize(13px);
+    @media (min-width: 768px) and (max-width:1439px){
+        @include fontSize(14px, 'normal',22px);
+    }
 
 }
 
 &__text--bottom {
     @include fontSize(13px);
+    @media (min-width: 768px) and (max-width:1439px){
+        @include fontSize(14px, 'normal',22px);
+    }
     
 }
 
 }
 
 
-// .homepage__photo-gallery starts....
+// .homepage__photo-gallery starts...
 
 .homepage__photo-gallery {
     box-sizing: border-box;
     padding: 2rem 1rem 1.5rem 1rem;
     @include backgroundColor(#FAFAFA);
+    @media (min-width: 768px) and (max-width:1439px) {
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
+    }
+
+
+    h1 {
+        font-family: "Avenir-bold";
+        margin: 0px;
+        padding-bottom: 1.5rem;
+        @media (min-width: 768px) and (max-width:1439px){
+            @include fontSize(24px, 'normal',32px);
+        }
+    }
 
     img {
         width: 100%;
         padding-bottom: 1rem;
+        @media (min-width: 768px) and (max-width:1439px) {
+            width: 224px;
+            height: 126px;
+            padding-bottom: 1.5rem;
+        }
     }
 
-    h1 {
-        margin: 0px;
-        padding-bottom: 1.5rem;
+    &--images {
+        @media (min-width: 768px) and (max-width:1439px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     }
+
 }
 
 
-// footer
+// footer starts....
 
-footer {
-    padding: 3rem 1rem 2rem 1rem;
+.footer {
+    box-sizing: border-box;
+    padding: 1rem 1rem 2rem 1rem;
     @include backgroundColor(#323232);
     color:$primary-text-color;
+    display: flex;
+    flex-direction: column;
+   
     
-    img {
-        width: 1rem;
-        
+    h1 {
+        font-family: "Avenir-bold";
+        @include fontSize(32px,'normal', 32px);
+    }
+    
+    &__icons {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            height: 1rem;    
+        }
     }
 
+    &__contact {
+        @include fontSize(13px);
+        margin-top: 2rem;
 
+        h4 {
+            margin: 0;
+            font-family: "Avenir-bold";
+        }
+        &--address {
+            padding: 1rem 0;
+        }
 
+        &--padding {
+            padding-bottom: 1.5rem;
+        }
+    }
+
+    &__copyright {
+        @include fontSize(13px);
+    }
+    
 }

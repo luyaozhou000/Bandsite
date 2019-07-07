@@ -1,3 +1,22 @@
+@font-face {
+  font-family: 'Avenir';
+  src: url("../fonts/AvenirNextProLt/Linotype - AvenirNextLTPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Avenir-heavy';
+  src: url("../fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Heavy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Avenir-bold';
+  src: url("../fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf") format("opentype");
+}
+
+* {
+  font-family: 'Avenir';
+}
+
 body {
   margin: 0px;
 }
@@ -17,11 +36,51 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .header__name {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .header__name {
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+  }
 }
 
 .header__name a {
@@ -37,6 +96,12 @@ body {
   display: flex;
 }
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  .header__nav {
+    width: 30%;
+  }
+}
+
 .header__nav--link {
   width: 50%;
   display: -webkit-box;
@@ -47,9 +112,17 @@ body {
           justify-content: center;
 }
 
-.header__nav a {
+.header__nav--link:hover {
+  border-bottom: 4px solid #fff;
+}
+
+.header__nav--link a {
   color: #fff;
   text-decoration: none;
+}
+
+.homepage {
+  color: #323232;
 }
 
 .homepage__hero {
@@ -69,13 +142,29 @@ body {
           justify-content: center;
 }
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__hero {
+    height: 400px;
+  }
+}
+
 .homepage__hero h2 {
   color: #fff;
+  font-family: "Avenir-bold";
   margin: 0;
-  padding: 1rem;
+  padding: 0 1rem;
   font-size: 24px;
-  font-weight: bold;
-  line-height: 18px;
+  font-weight: normal;
+  line-height: 32px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__hero h2 {
+    padding: 0 1.5rem;
+    font-size: 60px;
+    font-weight: normal;
+    line-height: 68px;
+  }
 }
 
 .homepage__musicians {
@@ -84,8 +173,23 @@ body {
   padding: 2rem 1rem 2.5rem 1rem;
 }
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__musicians {
+    padding: 2rem 1.5rem 2.5rem 1.5rem;
+  }
+}
+
 .homepage__musicians__header {
   margin: 0;
+  font-family: "Avenir-bold";
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__musicians__header {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 44px;
+  }
 }
 
 .homepage__musicians__image {
@@ -93,21 +197,48 @@ body {
   margin: 1.5rem 0;
 }
 
-.homepage__musicians__description {
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__musicians__image {
+    height: 362px;
+  }
+}
+
+.homepage__musicians__description--top {
+  font-family: "Avenir-bold";
+  color: #323232;
   font-size: 13px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 18px;
 }
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__musicians__description--top {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    text-align: left;
+  }
+}
+
 .homepage__musicians__description--bottom {
+  font-family: "Avenir-bold";
   padding-top: 2rem;
   padding-bottom: 2.5rem;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
 }
 
 .homepage__musicians__text--title {
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 22px;
+  font-family: "Avenir-bold";
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__musicians__text--title {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+  }
 }
 
 .homepage__musicians__text--top {
@@ -118,10 +249,26 @@ body {
   line-height: 18px;
 }
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__musicians__text--top {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+  }
+}
+
 .homepage__musicians__text--bottom {
   font-size: 13px;
   font-weight: normal;
   line-height: 18px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__musicians__text--bottom {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+  }
 }
 
 .homepage__photo-gallery {
@@ -131,23 +278,111 @@ body {
   background-color: #FAFAFA;
 }
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__photo-gallery {
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+  }
+}
+
+.homepage__photo-gallery h1 {
+  font-family: "Avenir-bold";
+  margin: 0px;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__photo-gallery h1 {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 32px;
+  }
+}
+
 .homepage__photo-gallery img {
   width: 100%;
   padding-bottom: 1rem;
 }
 
-.homepage__photo-gallery h1 {
-  margin: 0px;
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__photo-gallery img {
+    width: 224px;
+    height: 126px;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__photo-gallery--images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.footer {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem 1rem 2rem 1rem;
+  background-color: #323232;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer h1 {
+  font-family: "Avenir-bold";
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 32px;
+}
+
+.footer__icons {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__icons img {
+  height: 1rem;
+}
+
+.footer__contact {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  margin-top: 2rem;
+}
+
+.footer__contact h4 {
+  margin: 0;
+  font-family: "Avenir-bold";
+}
+
+.footer__contact--address {
+  padding: 1rem 0;
+}
+
+.footer__contact--padding {
   padding-bottom: 1.5rem;
 }
 
-footer {
-  padding: 3rem 1rem 2rem 1rem;
-  background-color: #323232;
-  color: #fff;
-}
-
-footer img {
-  width: 1rem;
+.footer__copyright {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
 }
 /*# sourceMappingURL=styles.css.map */
