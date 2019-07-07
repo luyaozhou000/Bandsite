@@ -83,6 +83,12 @@ body {
   }
 }
 
+@media (min-width: 1440px) {
+  .header__name {
+    margin-left: 11.25rem;
+  }
+}
+
 .header__name a {
   text-decoration: none;
   color: #fff;
@@ -132,12 +138,36 @@ body {
   }
 }
 
+@media (min-width: 1440px) {
+  .header__nav--link {
+    width: 5rem;
+    height: 80px;
+    margin-left: 3.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .header__nav--link a {
   color: #fff;
   text-decoration: none;
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
+  .header__nav--link a {
+    max-height: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
   .header__nav--link a {
     max-height: 20px;
   }
@@ -170,6 +200,12 @@ body {
   }
 }
 
+@media (min-width: 1440px) {
+  .homepage__hero {
+    height: 670px;
+  }
+}
+
 .homepage__hero h2 {
   color: #fff;
   font-family: "Avenir-bold";
@@ -189,6 +225,15 @@ body {
   }
 }
 
+@media (min-width: 1440px) {
+  .homepage__hero h2 {
+    padding: 0 11.25rem;
+    font-size: 60px;
+    font-weight: normal;
+    line-height: 68px;
+  }
+}
+
 .homepage__musicians {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -201,12 +246,26 @@ body {
   }
 }
 
+@media (min-width: 1440px) {
+  .homepage__musicians {
+    padding: 3rem 11.25rem 3rem 11.25rem;
+  }
+}
+
 .homepage__musicians__header {
   margin: 0;
   font-family: "Avenir-bold";
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__musicians__header {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 44px;
+  }
+}
+
+@media (min-width: 1440px) {
   .homepage__musicians__header {
     font-size: 36px;
     font-weight: normal;
@@ -225,12 +284,20 @@ body {
   }
 }
 
+@media (min-width: 1440px) {
+  .homepage__musicians__image {
+    height: 450px;
+    width: 83%;
+    margin: 3rem 5.75rem;
+  }
+}
+
 .homepage__musicians__description--top {
   font-family: "Avenir-bold";
   color: #323232;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: normal;
-  line-height: 18px;
+  line-height: 22px;
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
@@ -242,13 +309,46 @@ body {
   }
 }
 
+@media (min-width: 1440px) {
+  .homepage__musicians__description--top {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    text-align: left;
+    width: 83%;
+    margin: 0rem 5.75rem;
+  }
+}
+
 .homepage__musicians__description--bottom {
   font-family: "Avenir-bold";
+  color: #323232;
   padding-top: 2rem;
   padding-bottom: 2.5rem;
   font-size: 13px;
   font-weight: normal;
   line-height: 18px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__musicians__description--bottom {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__musicians__description--bottom {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    width: 83%;
+    margin: 0rem 5.75rem;
+    padding-top: 2.5rem;
+    padding-bottom: 3.5rem;
+  }
 }
 
 .homepage__musicians__text--title {
@@ -260,6 +360,27 @@ body {
     font-size: 16px;
     font-weight: normal;
     line-height: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__musicians__text--title {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__musicians__text {
+    width: 83%;
+    margin: 0rem 5.75rem;
+  }
+  .homepage__musicians__text .text-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -279,6 +400,17 @@ body {
   }
 }
 
+@media (min-width: 1440px) {
+  .homepage__musicians__text--top {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    padding-top: 2rem;
+    padding-bottom: 0;
+    margin-right: 2.5rem;
+  }
+}
+
 .homepage__musicians__text--bottom {
   font-size: 13px;
   font-weight: normal;
@@ -290,6 +422,15 @@ body {
     font-size: 14px;
     font-weight: normal;
     line-height: 22px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__musicians__text--bottom {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    padding-top: 2rem;
   }
 }
 
@@ -306,6 +447,12 @@ body {
   }
 }
 
+@media (min-width: 1440px) {
+  .homepage__photo-gallery {
+    padding: 3rem 11.25rem 1rem 11.25rem;
+  }
+}
+
 .homepage__photo-gallery h1 {
   font-family: "Avenir-bold";
   margin: 0px;
@@ -314,9 +461,18 @@ body {
 
 @media (min-width: 768px) and (max-width: 1439px) {
   .homepage__photo-gallery h1 {
-    font-size: 24px;
+    font-size: 36px;
     font-weight: normal;
-    line-height: 32px;
+    line-height: 44px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__photo-gallery h1 {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 44px;
+    padding-bottom: 4rem;
   }
 }
 
@@ -333,7 +489,28 @@ body {
   }
 }
 
+@media (min-width: 1440px) {
+  .homepage__photo-gallery img {
+    width: 344px;
+    height: 193px;
+    padding-bottom: 1.5rem;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__photo-gallery--images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1440px) {
   .homepage__photo-gallery--images {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -367,6 +544,12 @@ body {
   }
 }
 
+@media (min-width: 1440px) {
+  .footer {
+    padding: 3rem 11.25rem 1rem 11.25rem;
+  }
+}
+
 .footer h1 {
   font-family: "Avenir-bold";
   font-size: 24px;
@@ -378,7 +561,15 @@ body {
   .footer h1 {
     font-size: 36px;
     font-weight: normal;
-    line-height: 32px;
+    line-height: 44px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer h1 {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 44px;
   }
 }
 
@@ -403,6 +594,25 @@ body {
   }
 }
 
+@media (min-width: 1440px) {
+  .footer__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer__title--logo {
+    display: block;
+    width: 120px;
+    height: 24px;
+  }
+}
+
 .footer__icons {
   width: 40%;
   display: -webkit-box;
@@ -411,6 +621,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 1rem;
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
@@ -419,8 +630,11 @@ body {
   }
 }
 
-.footer__icons img {
-  height: 1rem;
+@media (min-width: 1440px) {
+  .footer__icons {
+    width: 20%;
+    height: 2rem;
+  }
 }
 
 .footer__contact {
@@ -432,6 +646,9 @@ body {
 
 @media (min-width: 768px) and (max-width: 1439px) {
   .footer__contact {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -439,6 +656,25 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer__contact {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 70%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -465,6 +701,17 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
+  .footer__copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1440px) {
   .footer__copyright {
     display: -webkit-box;
     display: -ms-flexbox;
