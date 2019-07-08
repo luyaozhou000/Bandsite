@@ -365,23 +365,27 @@ body {
     color:$primary-text-color;
     display: flex;
     flex-direction: column;
+
     @media (min-width: 768px) and (max-width:1439px) {
         padding: 1rem 1.5rem 2rem 1.5rem;
     }
 
     @media (min-width: 1440px) {
-        padding: 3rem 11.25rem 1rem 11.25rem;
+        padding: 3rem 11.25rem 3rem 11.25rem;
     }
    
     h1 {
         font-family: "Avenir-bold";
         @include fontSize(24px,'normal', 32px);
+
         @media (min-width: 768px) and (max-width:1439px) {
             @include fontSize(36px, 'normal', 44px);
+            margin: 0;
         }
 
         @media (min-width: 1440px) {
             @include fontSize(36px, 'normal', 44px);
+            margin: 0;
         }
     }
 
@@ -389,12 +393,14 @@ body {
         &--logo {
             display: none;
         }
+
         @media (min-width: 768px) and (max-width:1439px) {
             display: flex;
             align-items: center;
             justify-content: space-between;
             &--logo {
                 display: block;
+                
             }
         }
 
@@ -408,9 +414,6 @@ body {
                 height: 24px;
             }
         }
-
-
-
     }
     
     &__icons {
@@ -421,11 +424,13 @@ body {
                 
         @media (min-width: 768px) and (max-width:1439px) {
             width: 20%;
+            margin-right: 10rem;
         }
 
         @media (min-width: 1440px) {
-            width: 20%;
+            width: 11%;
             height: 2rem;
+            margin-right: 30rem;
         }
    
     }
@@ -442,14 +447,13 @@ body {
    
         @media (min-width: 1440px) {
             @include fontSize(14px,'normal', 20px);
+            margin-top: 3.5rem;
+            margin-bottom: 1rem;
             display: flex;
             flex-direction: row;
             width: 70%;
             justify-content: space-between;
         }
-
-
-
 
         h4 {
             margin: 0;
@@ -467,11 +471,13 @@ body {
     &__copyright {
         @include fontSize(13px);
         @media (min-width: 768px) and (max-width:1439px) {
+            @include fontSize(14px,'normal', 20px);
             display: flex;
             justify-content: flex-start;
         }
 
         @media (min-width: 1440px) {
+            @include fontSize(14px,'normal', 20px);
             display: flex;
             justify-content: flex-start;
         }
