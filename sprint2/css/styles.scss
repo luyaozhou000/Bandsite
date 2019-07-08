@@ -1,0 +1,486 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/AvenirNextProLt/Linotype - AvenirNextLTPro-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Avenir-heavy';
+    src: url('../fonts/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Heavy.otf') format('opentype');
+}
+
+@font-face {
+    font-family:  'Avenir-bold';
+    src: url('../fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf') format('opentype');
+}
+
+* {
+    font-family: 'Avenir';
+}
+
+body {
+    margin: 0px;
+}
+
+.header {
+    background-color:#323232;
+    height: 80px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+     @media (min-width: 768px) and (max-width:1439px) {
+        flex-direction: row;
+        justify-content: flex-start; 
+        align-items: center;
+    }
+
+    @media (min-width: 1440px) {
+        flex-direction: row;
+        justify-content: flex-start; 
+        align-items: center;
+    }
+
+&__name {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    @media (min-width: 768px) and (max-width:1439px) {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    
+    @media (min-width: 1440px) {
+        margin-left: 11.25rem;
+    }
+
+      a {
+        text-decoration: none;
+        color: $primary-text-color;
+        text-transform: uppercase;
+      }   
+   }
+
+&__nav { 
+    width: 100%;
+    display: flex;
+
+    @media (min-width: 768px) and (max-width:1439px) {
+        width: 30%;       
+    }
+   }
+}
+
+
+.header__nav--link {
+       width: 50%;
+       display: flex;
+       justify-content: center;
+       &:hover {
+        border-bottom: 4px solid #fff;   
+        }
+
+        @media (min-width: 768px) and (max-width:1439px) {
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;    
+        }
+
+        @media (min-width: 1440px) {
+            width: 5rem;
+            height: 80px;
+            margin-left: 3.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;   
+        }
+    
+   a {
+    color: $primary-text-color;
+    text-decoration: none;  
+    @media (min-width: 768px) and (max-width:1439px) {
+        max-height: 20px;
+       }
+    @media (min-width: 1440px) {
+        max-height: 20px;
+      }
+    }    
+}
+
+
+// homepage starts.....
+
+.homepage {
+    color: #323232;
+}
+
+.homepage__hero {
+    background-image: url(../image/hero.jpg);
+    width: 100%;
+    height: 183px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width: 768px) and (max-width:1439px) {
+        height: 400px;
+    }
+  
+    @media (min-width: 1440px) {
+        height: 670px;
+    }
+
+    h2 {
+        color: $primary-text-color;
+        font-family: "Avenir-bold";
+        margin: 0;
+        padding: 0 1rem;
+        @include fontSize(24px,'normal', 32px);
+        
+        @media (min-width: 768px) and (max-width:1439px) {
+            padding: 0 1.5rem;
+            @include fontSize(60px, 'normal', 68px);
+        }
+
+        @media (min-width: 1440px) {
+            padding: 0 11.25rem;
+            @include fontSize(60px, 'normal', 68px);
+        }
+    }
+}
+
+
+// .homepage__musicians starts....
+
+.homepage__musicians {
+    box-sizing: border-box;
+    padding: 2rem 1rem 2.5rem 1rem;
+
+    @media (min-width: 768px) and (max-width:1439px) {
+        padding: 2rem 1.5rem 2.5rem 1.5rem;
+    }
+    
+    @media (min-width: 1440px) {
+        padding: 3rem 11.25rem 3rem 11.25rem;
+    }
+
+&__header {
+    margin: 0;
+    font-family: "Avenir-bold";
+    @media (min-width: 768px) and (max-width:1439px) {
+        @include fontSize(36px,'normal', 44px);
+    }
+
+    @media (min-width: 1440px) {
+        @include fontSize(36px,'normal', 44px);
+    }
+}
+
+&__image {
+    width: 100%;
+    margin: 1.5rem 0;
+    @media (min-width: 768px) and (max-width:1439px) {
+        height: 362px;
+    }
+
+    @media (min-width: 1440px) {
+        height: 450px;
+        width: 83%;
+        margin: 3rem 5.75rem;
+    }
+}
+
+&__description {
+
+   &--top {
+    font-family: "Avenir-bold";
+    color: #323232;
+    @include fontSize(14px, 'normal', 22px);
+
+    @media (min-width: 768px) and (max-width:1439px) {
+        @include fontSize(16px, 'normal',24px);
+        text-align: left;
+    }
+
+    @media (min-width: 1440px) {
+        @include fontSize(16px, 'normal',24px);
+        text-align: left;
+        width: 83%;
+        margin: 0rem 5.75rem;
+    }
+
+   }
+
+   &--bottom {
+        font-family: "Avenir-bold";
+        color: #323232;
+        padding-top: 2rem;
+        padding-bottom: 2.5rem;
+        @include fontSize(13px);
+
+        @media (min-width: 768px) and (max-width:1439px) {
+            @include fontSize(14px, 'normal',22px);
+            text-align: left;
+        }
+
+        @media (min-width: 1440px) {
+            @include fontSize(14px, 'normal',22px);
+            width: 83%;
+            margin: 0rem 5.75rem;
+            padding-top: 2.5rem;
+            padding-bottom: 3.5rem;
+        }
+   }
+}
+
+
+&__text--title {
+    font-family: "Avenir-bold";
+    @media (min-width: 768px) and (max-width:1439px) {
+        @include fontSize(16px, 'normal',24px);
+    }  
+    
+    @media (min-width: 1440px) {
+        @include fontSize(16px, 'normal',24px);
+    }
+   
+}
+
+&__text {
+    @media (min-width: 1440px) {
+        width: 83%;  
+        margin: 0rem 5.75rem;
+
+        .text-container {
+          width: 100%;
+          display: flex;
+        }
+    }
+}
+
+&__text--top {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    @include fontSize(13px);
+    @media (min-width: 768px) and (max-width:1439px){
+        @include fontSize(14px, 'normal',22px);
+    }
+
+    @media (min-width: 1440px) {
+        @include fontSize(14px, 'normal',22px);
+        padding-top: 2rem;
+        padding-bottom: 0;
+        margin-right: 2.5rem;
+    }
+
+}
+
+&__text--bottom {
+    @include fontSize(13px);
+    @media (min-width: 768px) and (max-width:1439px){
+        @include fontSize(14px, 'normal',22px);
+    }
+    
+    @media (min-width: 1440px) {
+        @include fontSize(14px, 'normal',22px);
+        padding-top: 2rem;
+    }
+  }
+}
+
+
+// .homepage__photo-gallery starts...
+
+.homepage__photo-gallery {
+    box-sizing: border-box;
+    padding: 2rem 1rem 1.5rem 1rem;
+    @include backgroundColor(#FAFAFA);
+
+    @media (min-width: 768px) and (max-width:1439px) {
+        padding: 2rem 1.5rem 1.5rem 1.5rem;
+    }
+ 
+    @media (min-width: 1440px) {
+        padding: 3rem 11.25rem 1rem 11.25rem;
+    }
+
+    h1 {
+        font-family: "Avenir-bold";
+        margin: 0px;
+        padding-bottom: 1.5rem;
+        @media (min-width: 768px) and (max-width:1439px){
+            @include fontSize(36px, 'normal',44px);
+        }
+
+        @media (min-width: 1440px) {
+            @include fontSize(36px, 'normal',44px);
+            padding-bottom: 4rem;
+        }
+    }
+
+    img {
+        width: 100%;
+        padding-bottom: 1rem;
+        @media (min-width: 768px) and (max-width:1439px) {
+            width: 224px;
+            height: 126px;
+            padding-bottom: 1.5rem;
+        }
+
+        @media (min-width: 1440px) {
+            width: 344px;
+            height: 193px;
+            padding-bottom: 1.5rem;
+        }
+    }
+
+    &--images {
+        @media (min-width: 768px) and (max-width:1439px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        @media (min-width: 1440px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+}
+
+
+// footer starts....
+
+.footer {
+    box-sizing: border-box;
+    padding: 1rem 1rem 2rem 1rem;
+    @include backgroundColor(#323232);
+    color:$primary-text-color;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) and (max-width:1439px) {
+        padding: 1rem 1.5rem 2rem 1.5rem;
+    }
+
+    @media (min-width: 1440px) {
+        padding: 3rem 11.25rem 3rem 11.25rem;
+    }
+   
+    h1 {
+        font-family: "Avenir-bold";
+        @include fontSize(24px,'normal', 32px);
+
+        @media (min-width: 768px) and (max-width:1439px) {
+            @include fontSize(36px, 'normal', 44px);
+            margin: 0;
+        }
+
+        @media (min-width: 1440px) {
+            @include fontSize(36px, 'normal', 44px);
+            margin: 0;
+        }
+    }
+
+    &__title {
+        &--logo {
+            display: none;
+        }
+
+        @media (min-width: 768px) and (max-width:1439px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &--logo {
+                display: block;
+                
+            }
+        }
+
+        @media (min-width: 1440px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &--logo {
+                display: block;
+                width: 120px;
+                height: 24px;
+            }
+        }
+    }
+    
+    &__icons {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        height: 1rem;
+                
+        @media (min-width: 768px) and (max-width:1439px) {
+            width: 20%;
+            margin-right: 10rem;
+        }
+
+        @media (min-width: 1440px) {
+            width: 11%;
+            height: 2rem;
+            margin-right: 30rem;
+        }
+   
+    }
+
+    &__contact {
+        @include fontSize(13px);
+        margin-top: 2rem;
+        @media (min-width: 768px) and (max-width:1439px) {
+            @include fontSize(14px,'normal', 20px);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+   
+        @media (min-width: 1440px) {
+            @include fontSize(14px,'normal', 20px);
+            margin-top: 3.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: row;
+            width: 70%;
+            justify-content: space-between;
+        }
+
+        h4 {
+            margin: 0;
+            font-family: "Avenir-bold";
+        }
+        &--address {
+            padding: 1rem 0;
+        }
+
+        &--padding {
+            padding-bottom: 1.5rem;
+        }
+    }
+
+    &__copyright {
+        @include fontSize(13px);
+        @media (min-width: 768px) and (max-width:1439px) {
+            @include fontSize(14px,'normal', 20px);
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        @media (min-width: 1440px) {
+            @include fontSize(14px,'normal', 20px);
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+    
+}
