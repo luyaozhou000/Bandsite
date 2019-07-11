@@ -128,12 +128,17 @@ body {
     // flex-direction: column;
     // justify-content: center;
 
-    // @media (min-width: 768px) and (max-width:1439px) {
-    //     height: 400px;
-    // }
+    @media (min-width: 768px) and (max-width:1439px) {
+        height: 670px;
+    }
   
-    // @media (min-width: 1440px) {
-    //     height: 670px;
+    @media (min-width: 1440px) {
+        height: 670px;
+        display: flex;
+        align-items: flex-end;
+        
+
+    }
     
     &--text {
       padding: 4rem 1rem 4rem 1rem;
@@ -141,14 +146,33 @@ body {
       font-family: 'Avenir-heavy';
       @include fontSize(36px,'bold', 44px);
 
+      @media (min-width: 768px) and (max-width:1439px) {
+        padding: 6rem 3rem 3rem 1.5rem;
+        width: 70%;
+        @include fontSize(60px, 'bold', 68px);
+      }
+
+      @media (min-width: 1440px) {
+        padding: 10rem 5rem 10rem 11.25rem;
+        width: 50%;
+        @include fontSize(60px, 'bold', 68px);
+      }
+
       .sub-title {
         @include fontSize(13px);
+        @media (min-width: 768px) and (max-width:1439px) {
+            @include fontSize(24px, 'bold', 32px);
+            font-family: 'Avenir-bold';
+        }
+
+        @media (min-width: 1440px) {
+            @include fontSize(24px, 'bold', 32px);
+            font-family: 'Avenir-bold';
+            margin-bottom: 3rem;
+        }
+
       }
-        
-        // @media (min-width: 768px) and (max-width:1439px) {
-        //     padding: 0 1.5rem;
-        //     @include fontSize(60px, 'normal', 68px);
-        // }
+         
 
         // @media (min-width: 1440px) {
         //     padding: 0 11.25rem;
@@ -160,6 +184,17 @@ body {
         background-color: #E1E1E1;
         height: 5rem;
         margin: 0 1rem 0 1rem;
+        @media (min-width: 768px) and (max-width:1439px) {
+            width: 50%;
+            // needs to fix this later!
+        }
+
+        @media (min-width: 1440px) {
+            width: 40%;
+            height: 146px;
+            margin-right: 11.25rem;
+            margin-bottom: 10rem;
+        }
     }
     
 }
@@ -167,33 +202,137 @@ body {
 .homepage__shows {
     padding: 2rem 1rem 1rem 1rem;
 
+    @media (min-width: 768px) and (max-width:1439px) {
+        padding: 2rem 1.5rem 1rem 1.5rem;
+
+    }   
+
+    @media (min-width: 1440px) {
+        padding: 3rem 11.25rem 1rem 11.25rem;
+        // the card-container below is used to flex the shows header and dates,venue
+        // and location
+        .card-container {
+            display: flex;
+        }
+    }
+
+
+
     h2 {
         margin: 0;
         font-family: 'Avenir-bold';
         @include fontSize(24px,'bold', 32px);
-        padding-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
+
+        @media (min-width: 768px) and (max-width:1439px) {
+            @include fontSize(36px,'bold', 44px);
+        }
+        
+        @media (min-width: 1440px) {
+            @include fontSize(36px,'bold', 44px);
+            width: 25%;
+        }
+
     }
 
     &--hide {
         display: none;
+
+        @media (min-width: 768px) and (max-width:1439px) {
+            display: flex;
+            @include fontSize(13px);
+            color: #AFAFAF;
+            
+            .date {
+                width: 31%;
+            }
+
+            .venue {
+                width: 20%;
+            }
+        }
+
+        @media (min-width: 1440px) {
+            width: 75%;
+            display: flex;
+            @include fontSize(14px, 'normal', 22px);
+            color: #AFAFAF;
+
+            .date {
+                width: 25%;
+            }
+
+            .venue {
+                width: 16%;
+            }
+        }
     }
    
     &--card {
         @include fontSize(12px,'bold', 18px);
-        border-bottom: 2px solid #AFAFAF;
+        border-bottom: 1px solid #AFAFAF;
         margin-bottom: 1rem;
+
+        @media (min-width: 768px) and (max-width:1439px) {
+            display: flex;
+            align-items: center;
+            @include fontSize(13px);
+        }
+        
+        @media (min-width: 1440px) {
+            display: flex;
+            padding-left: 25%;
+            @include fontSize(13px);
+        }
 
         .mobile {
             color:#AFAFAF;
             padding-bottom: 1rem;
+            @media (min-width: 768px) and (max-width:1439px) {
+                display: none;
+            }
+
+            @media (min-width: 1440px) {
+                display: none;
+            }
         }
 
         .date-text {
             padding-bottom: 1.5rem;
+            @media (min-width: 768px) and (max-width:1439px) {
+                width: 31%;
+                padding: 0;
+            }
+
+            @media (min-width: 1440px) {
+                width: 25%;
+                font-family: 'Avenir-bold';
+            }
+            
         }
 
         .venue-text {
-            padding-bottom: 1.5rem;
+            padding-bottom: 1.5rem; 
+            @media (min-width: 768px) and (max-width:1439px) {
+                width: 20%;
+                padding: 0;
+            }
+
+            @media (min-width: 1440px) {
+                width: 16%;
+                font-family: 'Avenir-bold';
+            }
+              
+        }
+
+        .location-text {
+            @media (min-width: 768px) and (max-width:1439px) {
+                width: 29%;
+            }
+            @media (min-width: 1440px) {
+                width: 37%;
+                font-family: 'Avenir-bold';
+            }
         }
 
         .card-button {
@@ -204,6 +343,19 @@ body {
             text-transform: uppercase;
             border-radius: 4px;
             margin: 2rem 0 1rem 0;
+
+            @media (min-width: 768px) and (max-width:1439px) {
+                width: 20%;
+                height: 3rem;
+                margin-top: 0;
+            }
+
+            @media (min-width: 1440px)  {
+                width: 20%;
+                height: 3rem;
+                margin-top: 0;
+                
+            }
         }
     }
 
