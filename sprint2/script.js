@@ -15,8 +15,8 @@ function handleFeedbackSubmission(eventObject) {
 let name = eventObject.target.userName.value;
 let comment = eventObject.target.userComment.value;
 
-  console.log(eventObject.target.userName.value);
-  console.log(eventObject.target.userComment.value);
+  // console.log(eventObject.target.userName.value);
+  // console.log(eventObject.target.userComment.value);
 
 // calling createComment function 
     createComment(name, comment)
@@ -34,6 +34,7 @@ function createComment (name, comment) {
     commentContainer.className = "default-comment";
     // commentContainer.innerHTML = name; 
     mainContainer.prepend(commentContainer);
+    
 
     let commentImage = document.createElement('div');
     commentImage.className = "default-comment__img";
@@ -54,7 +55,7 @@ function createComment (name, comment) {
 
     // get the current date
     let today = new Date();
-    let date = (today.getMonth()+1) +'/' +today.getDate() + '/' + today.getFullYear();
+    let date = (today.getMonth()+1) +'/' + today.getDate() + '/' + today.getFullYear();
 
     let titleDate = document.createElement('div');
     titleDate.className = 'title__date';

@@ -122,16 +122,17 @@ body {
 iframe {
     // background-color: #E1E1E1;
     height: 5rem;
-    width: 85%;
-    margin: 0 1rem 0 1rem;
-
+    width: 90%;
+   
     @media (min-width: 768px) and (max-width:1439px) {
         width: 50%;
-        // needs to fix this later!
+        height: 10rem;
+        margin-left: 1.5rem;
+       
     }
 
     @media (min-width: 1440px) {
-        width: 40%;
+        width: 90%;
         height: 146px;
         margin-right: 11.25rem;
         margin-bottom: 10rem;
@@ -173,8 +174,8 @@ iframe {
       }
 
       @media (min-width: 1440px) {
-        padding: 10rem 5rem 10rem 11.25rem;
-        width: 50%;
+        padding: 10rem 4rem 10rem 11.25rem;
+        width: 40%;
         @include fontSize(60px, 'bold', 68px);
       }
 
