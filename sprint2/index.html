@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
   <header class="header">
 
     <section class="header__name">
@@ -18,7 +19,7 @@
     <section class="header__nav">
 
       <div class="header__nav--link"><a href="#">Biography</a></div>
-      <div class="header__nav--link"><a href="#">Shows</a></div>
+      <div class="header__nav--link"><a href="page/shows.html">Shows</a></div>
 
     </section>
   </header>
@@ -88,6 +89,91 @@
       </div>
     </div>
 
+    <div class="homepage__comments">
+
+      <h2>Join the Conversation</h2>
+
+
+      <!-- left user icon + two input areas + comment button -->
+      <div class="homepage__comments--userInput">
+        <div><img class="homepage__comments--img" src="./image/Mohan-muruge.jpg"></div>
+
+        <form class="homepage__comments--input" name="feedback">
+
+          <label for="userName">Name
+            <input class="textArea" type="text" name="userName" id="user-name">
+          </label>
+
+          <label for="userComment">Comment
+            <input class="textArea" type="text" name="userComment" id="user-comment">
+          </label>
+
+          <button class="homepage__comments--button" type="submit">Comment</button>
+
+        </form>
+
+      </div>
+
+
+      <!-- Three default comments -->
+      <div class="homepage__comments--default">
+
+        <div class="default-comment top">
+          <div class="default-comment__img"></div>
+
+          <div class="container">
+
+            <div class="title">
+              <div class="title__name">Micheal Lyons</div>
+              <div class="title__date">12/18/2018</div>
+            </div>
+
+            <div class="title__comment">They BLEW the ROOF off at their last show, once everyone started
+              figuring out they were going. This is still simply the greatest opening of a
+              concert I have EVER witnessed.</div>
+          </div>
+        </div>
+
+        <div class="default-comment middle">
+          <div class="default-comment__img"></div>
+
+          <div class="container">
+            <div class="title">
+              <div>Gary Wong</div>
+              <div>12/18/2018</div>
+            </div>
+            <div>They BLEW the ROOF off at their last show, once everyone started
+              figuring out they were going. This is still simply the greatest opening of a
+              concert I have EVER witnessed.</div>
+          </div>
+        </div>
+
+        <div class="default-comment bottom">
+          <div class="default-comment__img"></div>
+          <div class="container">
+            <div class="title">
+              <div>Theodore</div>
+              <div>12/18/2018</div>
+            </div>
+            <div>They BLEW the ROOF off at their last show, once everyone started
+              figuring out they were going. This is still simply the greatest opening of a
+              concert I have EVER witnessed.</div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
 
   </section>
 
@@ -145,5 +231,8 @@
     </section>
 
   </footer>
+  <script src="./script.js" type="text/javascript"></script>
+
 </body>
+
 </html>

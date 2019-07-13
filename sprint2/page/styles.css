@@ -177,6 +177,27 @@ body {
   color: #323232;
 }
 
+iframe {
+  height: 5rem;
+  width: 85%;
+  margin: 0 1rem 0 1rem;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  iframe {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1440px) {
+  iframe {
+    width: 40%;
+    height: 146px;
+    margin-right: 11.25rem;
+    margin-bottom: 10rem;
+  }
+}
+
 .homepage__hero {
   background-image: url(image/hero.jpg);
   width: 100%;
@@ -253,27 +274,6 @@ body {
     line-height: 32px;
     font-family: 'Avenir-bold';
     margin-bottom: 3rem;
-  }
-}
-
-.homepage__hero--music {
-  background-color: #E1E1E1;
-  height: 5rem;
-  margin: 0 1rem 0 1rem;
-}
-
-@media (min-width: 768px) and (max-width: 1439px) {
-  .homepage__hero--music {
-    width: 50%;
-  }
-}
-
-@media (min-width: 1440px) {
-  .homepage__hero--music {
-    width: 40%;
-    height: 146px;
-    margin-right: 11.25rem;
-    margin-bottom: 10rem;
   }
 }
 
