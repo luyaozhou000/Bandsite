@@ -15,13 +15,14 @@ function handleFeedbackSubmission(eventObject) {
 let name = eventObject.target.userName.value;
 let comment = eventObject.target.userComment.value;
 
-//   console.log(eventObject.target.userName.value);
-//   console.log(eventObject.target.userComment.value);
+  console.log(eventObject.target.userName.value);
+  console.log(eventObject.target.userComment.value);
 
+// calling createComment function 
     createComment(name, comment)
 }
 
-// get the parent element, need to append newly created divs 
+// get the parent element, then need to append newly created divs 
 let mainContainer = document.querySelector('.homepage__comments--default');
 
 // let array = [{name:'Josh', comments: 'comments'}, {name: 'luyao'}];
@@ -32,7 +33,7 @@ function createComment (name, comment) {
     let commentContainer = document.createElement('div');
     commentContainer.className = "default-comment";
     // commentContainer.innerHTML = name; 
-    mainContainer.appendChild(commentContainer);
+    mainContainer.prepend(commentContainer);
 
     let commentImage = document.createElement('div');
     commentImage.className = "default-comment__img";
@@ -51,10 +52,14 @@ function createComment (name, comment) {
     commentTitle.appendChild(titleName);
     titleName.innerHTML = name;
 
+    // get the current date
+    let today = new Date();
+    let date = (today.getMonth()+1) +'/' +today.getDate() + '/' + today.getFullYear();
+
     let titleDate = document.createElement('div');
     titleDate.className = 'title__date';
     commentTitle.appendChild(titleDate);
-    titleDate.innerHTML = "new Date()";
+    titleDate.innerHTML = date;
 
     let newComment = document.createElement('div');
     newComment.className = "title__comment";
