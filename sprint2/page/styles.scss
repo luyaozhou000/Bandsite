@@ -216,7 +216,6 @@ iframe {
     }
 
 
-
     h2 {
         margin: 0;
         font-family: 'Avenir-bold';
@@ -306,6 +305,7 @@ iframe {
             @media (min-width: 1440px) {
                 width: 25%;
                 font-family: 'Avenir-bold';
+                @include fontSize(14px);
             }
             
         }
@@ -347,12 +347,14 @@ iframe {
                 width: 20%;
                 height: 3rem;
                 margin-top: 0;
+                @include fontSize(13px,bold,18px);
             }
 
             @media (min-width: 1440px)  {
                 width: 20%;
                 height: 3rem;
                 margin-top: 0;
+                @include fontSize(13px,bold,18px);
                 
             }
         }

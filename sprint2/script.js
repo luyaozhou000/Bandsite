@@ -5,7 +5,7 @@ let formEl = document.querySelector('.homepage__comments--input');
 formEl.addEventListener('submit', handleFeedbackSubmission);
 
 
-// define the function; parameter eventObject contains detailed info about the
+// declare the function; parameter eventObject contains detailed info about the
 // form element; note how we assigned name attribute to input and use eventObject.target. to
 // get its value;
 function handleFeedbackSubmission(eventObject) {
@@ -15,14 +15,16 @@ function handleFeedbackSubmission(eventObject) {
 let name = eventObject.target.userName.value;
 let comment = eventObject.target.userComment.value;
 
-  // console.log(eventObject.target.userName.value);
-  // console.log(eventObject.target.userComment.value);
+// console.log(eventObject.target.userName.value);
+// console.log(eventObject.target.userComment.value);
 
 // calling createComment function 
     createComment(name, comment)
 }
 
-// get the parent element, then need to append newly created divs 
+
+
+// get the parent element, then need to append new divs 
 let mainContainer = document.querySelector('.homepage__comments--default');
 
 // let array = [{name:'Josh', comments: 'comments'}, {name: 'luyao'}];
@@ -31,8 +33,7 @@ let mainContainer = document.querySelector('.homepage__comments--default');
 function createComment (name, comment) {
     // create first div here
     let commentContainer = document.createElement('div');
-    commentContainer.className = "default-comment";
-    // commentContainer.innerHTML = name; 
+    commentContainer.className = "default-comment"; 
     mainContainer.prepend(commentContainer);
     
 
@@ -53,7 +54,7 @@ function createComment (name, comment) {
     commentTitle.appendChild(titleName);
     titleName.innerHTML = name;
 
-    // get the current date
+    // get current date
     let today = new Date();
     let date = (today.getMonth()+1) +'/' + today.getDate() + '/' + today.getFullYear();
 

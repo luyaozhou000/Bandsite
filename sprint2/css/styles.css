@@ -527,11 +527,40 @@ body {
   padding: 0rem 1rem 2.5rem 1rem;
 }
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__Comments {
+    padding: 0rem 1.5rem 2.5rem 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments {
+    padding: 0rem 11.25rem 2.5rem 11.25rem;
+  }
+}
+
 .homepage__Comments h2 {
   font-size: 24px;
   font-weight: bold;
   line-height: 32px;
   font-family: "Avenir-bold";
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__Comments h2 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 44px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments h2 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 44px;
+    margin-bottom: 3.5rem;
+  }
 }
 
 .homepage__Comments--userInput {
@@ -540,6 +569,18 @@ body {
   display: flex;
   border-bottom: #E1E1E1 1px solid;
   padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__Comments--userInput {
+    margin: 0 7.75rem 0 7.75rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--userInput {
+    margin: 0 15.25rem 0 15.25rem;
+  }
 }
 
 .homepage__Comments form {
@@ -554,11 +595,24 @@ body {
   border-radius: 50%;
 }
 
+@media (min-width: 1440px) {
+  .homepage__Comments--img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1.25rem;
+  }
+}
+
 .homepage__Comments--input {
   width: 100%;
-  -webkit-box-shadow: 0 4px 3px -4px;
-          box-shadow: 0 4px 3px -4px;
-  border-radius: 2px;
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--input {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+  }
 }
 
 .homepage__Comments--button {
@@ -568,6 +622,27 @@ body {
   color: #fff;
   background-color: #323232;
   border-radius: 4px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__Comments--button {
+    width: 38%;
+    margin-left: 62%;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--button {
+    width: 38%;
+    height: 3rem;
+    margin-left: 62%;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+  }
 }
 
 .homepage__Comments .textArea {
@@ -592,16 +667,50 @@ body {
   background-color: #FAFAFA;
 }
 
+@media (min-width: 1440px) {
+  .homepage__Comments #user-name {
+    height: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
 .homepage__Comments #user-comment {
   margin-bottom: 1rem;
   height: 5rem;
   background-color: #FAFAFA;
 }
 
+@media (min-width: 1440px) {
+  .homepage__Comments #user-comment {
+    height: 6rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
 .homepage__Comments--default {
   font-size: 12px;
   font-weight: normal;
   line-height: 18px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__Comments--default {
+    margin: 0 7.75rem 0 7.75rem;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--default {
+    margin: 0 15.25rem 0 15.25rem;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+  }
 }
 
 .homepage__Comments--default .default-comment {
@@ -612,11 +721,34 @@ body {
   border-bottom: 2px solid #E1E1E1;
 }
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__Comments--default .default-comment {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--default .default-comment {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .homepage__Comments--default .default-comment__img {
   width: 2.5rem;
   height: 2.5rem;
   background-color: #E1E1E1;
   border-radius: 50%;
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--default .default-comment__img {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 .homepage__Comments--default .default-comment .title {
@@ -633,8 +765,36 @@ body {
   font-family: 'Avenir-bold';
 }
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__Comments--default .default-comment .title__name {
+    margin-right: 0.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--default .default-comment .title__name {
+    margin-right: 1rem;
+  }
+}
+
 .homepage__Comments--default .default-comment .title__date {
   color: #AFAFAF;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__Comments--default .default-comment .title {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--default .default-comment .title {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 .homepage__Comments--default .default-comment .container {
@@ -648,6 +808,18 @@ body {
   width: 80%;
   margin-left: 1rem;
   padding-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__Comments--default .default-comment .container {
+    width: 85%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--default .default-comment .container {
+    width: 88%;
+  }
 }
 
 .footer {

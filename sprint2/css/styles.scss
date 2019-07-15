@@ -360,10 +360,26 @@ body {
 
 .homepage__Comments {
   padding: 0rem 1rem 2.5rem 1rem;
+  @media (min-width: 768px) and (max-width:1439px) {
+    padding: 0rem 1.5rem 2.5rem 1.5rem;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0rem 11.25rem 2.5rem 11.25rem;
+  }
 
   h2 {
       @include fontSize(24px,bold,32px);
       font-family: "Avenir-bold";
+
+      @media (min-width: 768px) and (max-width:1439px) {
+        @include fontSize(36px,bold,44px);
+      }
+
+      @media (min-width: 1440px) {
+        @include fontSize(36px,bold,44px);
+        margin-bottom: 3.5rem;
+      }
   }
 
 
@@ -371,6 +387,13 @@ body {
       display: flex;
       border-bottom: #E1E1E1 1px solid;
       padding-bottom: 1rem;
+      @media (min-width: 768px) and (max-width:1439px) {
+          margin: 0 7.75rem 0 7.75rem;
+      }
+
+      @media (min-width: 1440px) {
+        margin: 0 15.25rem 0 15.25rem;
+      }
   }
 
   form {
@@ -383,14 +406,22 @@ body {
       height: 2.5rem;
       margin-top: 1rem;
       margin-right: 1rem;
-      border-radius: 50%;
+      border-radius: 50%; 
+      @media (min-width: 1440px) {
+        width: 3rem;
+        height: 3rem; 
+        margin-right: 1.25rem;
+      }
   }
 
   &--input {
       width: 100%;
+      @media (min-width: 1440px) {
+          @include fontSize(13px);
+      }
      
-      box-shadow: 0 4px 3px -4px;
-      border-radius: 2px;
+    //   box-shadow: 0 4px 3px -4px;
+    //   border-radius: 2px;
       
   }
   
@@ -401,6 +432,18 @@ body {
       color: $primary-text-color;
       background-color: #323232;
       border-radius: 4px;
+      @media (min-width: 768px) and (max-width:1439px) {
+          width: 38%;
+          margin-left: 62%;
+          @include fontSize(13px);
+      }
+
+      @media (min-width: 1440px) {
+        width: 38%;
+        height: 3rem;
+        margin-left: 62%;
+        @include fontSize(13px);
+      }
   }
 
 .textArea {
@@ -420,21 +463,46 @@ body {
 #user-name {
     margin-bottom: 1rem;
     background-color: #FAFAFA;
+    @media (min-width: 1440px) {
+        height: 3rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
 #user-comment {
     margin-bottom: 1rem;
     height: 5rem;
     background-color: #FAFAFA;
+    @media (min-width: 1440px) {
+        height: 6rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
   &--default {
     @include fontSize(12px);
 
+    @media (min-width: 768px) and (max-width:1439px) {
+        margin: 0 7.75rem 0 7.75rem;
+        @include fontSize(13px);
+    }
+    @media (min-width: 1440px) {
+        margin: 0 15.25rem 0 15.25rem;
+        @include fontSize(13px);
+    }
+
     .default-comment {
         display: flex;
         margin-top: 1.5rem;
         border-bottom: 2px solid #E1E1E1;
+        @media (min-width: 768px) and (max-width:1439px) {
+            justify-content: space-between;
+        }
+        @media (min-width: 1440px) {
+            justify-content: space-between;
+        }
        
 
         &__img {
@@ -442,6 +510,11 @@ body {
             height: 2.5rem;
             background-color: #E1E1E1;
             border-radius: 50%;
+
+            @media (min-width: 1440px) {
+                width: 3rem;
+                height: 3rem;
+            }
         }
 
         .title {
@@ -450,9 +523,22 @@ body {
             margin-bottom: 1rem;
             &__name {
                 font-family: 'Avenir-bold';
+                @media (min-width: 768px) and (max-width:1439px) {
+                    margin-right: 0.5rem;
+                }
+                @media (min-width: 1440px) {
+                    margin-right: 1rem;
+                }
             }
             &__date {
                 color: #AFAFAF;
+            }
+
+            @media (min-width: 768px) and (max-width:1439px) {
+                justify-content: flex-start;
+            }
+            @media (min-width: 1440px) {
+                justify-content: flex-start;
             }
         }
 
@@ -462,6 +548,12 @@ body {
             width: 80%;
             margin-left: 1rem;
             padding-bottom: 1.5rem;
+            @media (min-width: 768px) and (max-width:1439px) {
+                width: 85%;
+            }
+            @media (min-width: 1440px) {
+                width: 88%;
+            }
         }
     }
 

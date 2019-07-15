@@ -433,6 +433,9 @@ iframe {
   .homepage__shows--card .date-text {
     width: 25%;
     font-family: 'Avenir-bold';
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
   }
 }
 
@@ -482,6 +485,9 @@ iframe {
     width: 20%;
     height: 3rem;
     margin-top: 0;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 18px;
   }
 }
 
@@ -490,6 +496,9 @@ iframe {
     width: 20%;
     height: 3rem;
     margin-top: 0;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 18px;
   }
 }
 
