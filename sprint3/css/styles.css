@@ -1,0 +1,1035 @@
+@font-face {
+  font-family: 'Avenir';
+  src: url("../fonts/AvenirNextProLt/Linotype - AvenirNextLTPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Avenir-heavy';
+  src: url("../fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Heavy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Avenir-bold';
+  src: url("../fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf") format("opentype");
+}
+
+* {
+  font-family: 'Avenir';
+}
+
+body {
+  margin: 0px;
+}
+
+.header {
+  background-color: #323232;
+  height: 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.header__name {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .header__name {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header__name {
+    margin-left: 11.25rem;
+  }
+}
+
+.header__name a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.header__nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .header__nav {
+    width: 30%;
+  }
+}
+
+.header__nav--link {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__nav--link:hover {
+  border-bottom: 4px solid #fff;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .header__nav--link {
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header__nav--link {
+    width: 5rem;
+    height: 80px;
+    margin-left: 3.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.header__nav--link a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .header__nav--link a {
+    max-height: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header__nav--link a {
+    max-height: 20px;
+  }
+}
+
+.homepage {
+  color: #323232;
+}
+
+.homepage__hero {
+  background-image: url(../image/hero.jpg);
+  width: 100%;
+  height: 183px;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__hero {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__hero {
+    height: 670px;
+  }
+}
+
+.homepage__hero h2 {
+  color: #fff;
+  font-family: "Avenir-bold";
+  margin: 0;
+  padding: 0 1rem;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 32px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__hero h2 {
+    padding: 0 1.5rem;
+    font-size: 60px;
+    font-weight: normal;
+    line-height: 68px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__hero h2 {
+    padding: 0 11.25rem;
+    font-size: 60px;
+    font-weight: normal;
+    line-height: 68px;
+  }
+}
+
+.homepage__musicians {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2rem 1rem 2.5rem 1rem;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__musicians {
+    padding: 2rem 1.5rem 2.5rem 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__musicians {
+    padding: 3rem 11.25rem 3rem 11.25rem;
+  }
+}
+
+.homepage__musicians__header {
+  margin: 0;
+  font-family: "Avenir-bold";
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__musicians__header {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 44px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__musicians__header {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 44px;
+  }
+}
+
+.homepage__musicians__image {
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__musicians__image {
+    height: 362px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__musicians__image {
+    height: 450px;
+    width: 83%;
+    margin: 3rem 5.75rem;
+  }
+}
+
+.homepage__musicians__description--top {
+  font-family: "Avenir-bold";
+  color: #323232;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 22px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__musicians__description--top {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__musicians__description--top {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    text-align: left;
+    width: 83%;
+    margin: 0rem 5.75rem;
+  }
+}
+
+.homepage__musicians__description--bottom {
+  font-family: "Avenir-bold";
+  color: #323232;
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__musicians__description--bottom {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__musicians__description--bottom {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    width: 83%;
+    margin: 0rem 5.75rem;
+    padding-top: 2.5rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
+.homepage__musicians__text--title {
+  font-family: "Avenir-bold";
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__musicians__text--title {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__musicians__text--title {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__musicians__text {
+    width: 83%;
+    margin: 0rem 5.75rem;
+  }
+  .homepage__musicians__text .text-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.homepage__musicians__text--top {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__musicians__text--top {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__musicians__text--top {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    padding-top: 2rem;
+    padding-bottom: 0;
+    margin-right: 2.5rem;
+  }
+}
+
+.homepage__musicians__text--bottom {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__musicians__text--bottom {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__musicians__text--bottom {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    padding-top: 2rem;
+  }
+}
+
+.homepage__photo-gallery {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2rem 1rem 1.5rem 1rem;
+  background-color: #FAFAFA;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__photo-gallery {
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__photo-gallery {
+    padding: 3rem 11.25rem 1rem 11.25rem;
+  }
+}
+
+.homepage__photo-gallery h1 {
+  font-family: "Avenir-bold";
+  margin: 0px;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__photo-gallery h1 {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 44px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__photo-gallery h1 {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 44px;
+    padding-bottom: 4rem;
+  }
+}
+
+.homepage__photo-gallery img {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__photo-gallery img {
+    width: 224px;
+    height: 126px;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__photo-gallery img {
+    width: 344px;
+    height: 193px;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__photo-gallery--images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__photo-gallery--images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.homepage__Comments {
+  padding: 0rem 1rem 2.5rem 1rem;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__Comments {
+    padding: 0rem 1.5rem 2.5rem 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments {
+    padding: 0rem 11.25rem 2.5rem 11.25rem;
+  }
+}
+
+.homepage__Comments h2 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+  font-family: "Avenir-bold";
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__Comments h2 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 44px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments h2 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 44px;
+    margin-bottom: 3.5rem;
+  }
+}
+
+.homepage__Comments--userInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: #E1E1E1 1px solid;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__Comments--userInput {
+    margin: 0 7.75rem 0 7.75rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--userInput {
+    margin: 0 15.25rem 0 15.25rem;
+  }
+}
+
+.homepage__Comments form {
+  width: 100%;
+}
+
+.homepage__Comments--img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1.25rem;
+  }
+}
+
+.homepage__Comments--input {
+  width: 100%;
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--input {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+  }
+}
+
+.homepage__Comments--button {
+  width: 100%;
+  height: 3rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #323232;
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__Comments--button {
+    width: 38%;
+    margin-left: 62%;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--button {
+    width: 38%;
+    height: 3rem;
+    margin-left: 62%;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+  }
+}
+
+.homepage__Comments .textArea {
+  width: 100%;
+  height: 2rem;
+  display: block;
+  -webkit-box-shadow: 0 4px 3px -4px;
+          box-shadow: 0 4px 3px -4px;
+  border-radius: 2px;
+}
+
+.homepage__Comments label {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #AFAFAF;
+}
+
+.homepage__Comments #user-name {
+  margin-bottom: 1rem;
+  background-color: #FAFAFA;
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments #user-name {
+    height: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.homepage__Comments #user-comment {
+  margin-bottom: 1rem;
+  height: 5rem;
+  background-color: #FAFAFA;
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments #user-comment {
+    height: 6rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.homepage__Comments--default {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__Comments--default {
+    margin: 0 7.75rem 0 7.75rem;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--default {
+    margin: 0 15.25rem 0 15.25rem;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+  }
+}
+
+.homepage__Comments--default .default-comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1.5rem;
+  border-bottom: 2px solid #E1E1E1;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__Comments--default .default-comment {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--default .default-comment {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.homepage__Comments--default .default-comment__img {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #E1E1E1;
+  border-radius: 50%;
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--default .default-comment__img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.homepage__Comments--default .default-comment .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.homepage__Comments--default .default-comment .title__name {
+  font-family: 'Avenir-bold';
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__Comments--default .default-comment .title__name {
+    margin-right: 0.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--default .default-comment .title__name {
+    margin-right: 1rem;
+  }
+}
+
+.homepage__Comments--default .default-comment .title__date {
+  color: #AFAFAF;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__Comments--default .default-comment .title {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--default .default-comment .title {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.homepage__Comments--default .default-comment .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  margin-left: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homepage__Comments--default .default-comment .container {
+    width: 85%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage__Comments--default .default-comment .container {
+    width: 88%;
+  }
+}
+
+.footer {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem 1rem 2rem 1rem;
+  background-color: #323232;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .footer {
+    padding: 1rem 1.5rem 2rem 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    padding: 3rem 11.25rem 3rem 11.25rem;
+  }
+}
+
+.footer h1 {
+  font-family: "Avenir-bold";
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 32px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .footer h1 {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 44px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer h1 {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 44px;
+    margin: 0;
+  }
+}
+
+.footer__title--logo {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .footer__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer__title--logo {
+    display: block;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer__title--logo {
+    display: block;
+    width: 120px;
+    height: 24px;
+  }
+}
+
+.footer__icons {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 1rem;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .footer__icons {
+    width: 20%;
+    margin-right: 10rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer__icons {
+    width: 11%;
+    height: 2rem;
+    margin-right: 30rem;
+  }
+}
+
+.footer__contact {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .footer__contact {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer__contact {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 70%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.footer__contact h4 {
+  margin: 0;
+  font-family: "Avenir-bold";
+}
+
+.footer__contact--address {
+  padding: 1rem 0;
+}
+
+.footer__contact--padding {
+  padding-bottom: 1.5rem;
+}
+
+.footer__copyright {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .footer__copyright {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer__copyright {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
