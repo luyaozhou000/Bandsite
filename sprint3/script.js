@@ -1,5 +1,6 @@
 // First, get the form element; when event 'submit' occurs, function
 // handelFeedbackSubmission runs /* --- form submission handler registration --- */
+// create an array containing three default comments:
 let commentArray = [
   {
     name: "Micheal Lyons",
@@ -9,15 +10,15 @@ let commentArray = [
   },
   {
     name: "Gary Wong",
-    date: "12/18/2019",
+    date: "12/12/2019",
     comment:
       "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so Ican really enjoy myself!How can someone be so good"
   },
   {
     name: "Theodore Duncun",
-    date: "12/18/2019",
+    date: "11/15/2019",
     comment:
-      "They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed."
+      "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!"
   }
 ];
 
@@ -28,6 +29,7 @@ formEl.addEventListener("submit", handleFeedbackSubmission);
 // declare the function; parameter eventObject contains detailed info about the
 // form element; note how we assigned name attribute to input and use eventObject.target. to
 // get its value;
+
 function handleFeedbackSubmission(eventObject) {
   eventObject.preventDefault();
 
@@ -36,7 +38,7 @@ function handleFeedbackSubmission(eventObject) {
   let comment = eventObject.target.userComment.value;
 
   let today = new Date();
-
+// using .unshift to add the new object which contains entered name and comment to the beginning of the array:
 commentArray.unshift(
   {
     name: name, 
@@ -45,9 +47,8 @@ commentArray.unshift(
   }
   );
 
-
   // calling createComment function
-  createComment(name, comment);
+  createComment();
 }
 
 // *****************************************
@@ -55,7 +56,7 @@ commentArray.unshift(
 let mainContainer = document.querySelector(".homepage__comments--default");
 let commentDefault = document.querySelector(".homepage__comments--default");
 
-function createComment(name, comment) {
+function createComment() {
   // this clears three comments:
   commentDefault.innerHTML = "";
 
@@ -98,4 +99,9 @@ for(i=0; i<commentArray.length; i++) {
   commentSubContainer.appendChild(newComment);
   newComment.innerHTML = commentArray[i].comment;
 }
+
+
+// clear input after submitting 
+document.querySelectorAll('.textArea')[0].value = "";
+document.querySelectorAll('.textArea')[1].value = "";
 }
