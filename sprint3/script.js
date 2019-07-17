@@ -1,27 +1,35 @@
 // First, get the form element; when event 'submit' occurs, function
 // handelFeedbackSubmission runs /* --- form submission handler registration --- */
 // create an array containing three default comments:
-let commentArray = [
-  {
-    name: "Micheal Lyons",
-    date: "12/18/2018",
-    comment:
-      "They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed."
-  },
-  {
-    name: "Gary Wong",
-    date: "12/12/2019",
-    comment:
-      "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so Ican really enjoy myself!How can someone be so good"
-  },
-  {
-    name: "Theodore Duncun",
-    date: "11/15/2019",
-    comment:
-      "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!"
-  }
-];
+// let commentArray = [
+//   {
+//     name: "Micheal Lyons",
+//     date: "12/18/2018",
+//     comment:
+//       "They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed."
+//   },
+//   {
+//     name: "Gary Wong",
+//     date: "12/12/2019",
+//     comment:
+//       "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so Ican really enjoy myself!How can someone be so good"
+//   },
+//   {
+//     name: "Theodore Duncun",
+//     date: "11/15/2019",
+//     comment:
+//       "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!"
+//   }
+// ];
 
+axios
+  .get("https://project-1-api.herokuapp.com/comments?api_key=luyao")
+  .then(response => {
+    console.log(response);
+    let comment = response.data;
+    createComment(comment);
+
+  })
 
 let formEl = document.querySelector(".homepage__comments--input");
 formEl.addEventListener("submit", handleFeedbackSubmission);
@@ -56,11 +64,11 @@ commentArray.unshift(
 let mainContainer = document.querySelector(".homepage__comments--default");
 let commentDefault = document.querySelector(".homepage__comments--default");
 
-function createComment() {
+function createComment(array) {
   // this clears three comments:
   commentDefault.innerHTML = "";
 
-for(i=0; i<commentArray.length; i++) {
+for(i=0; i<array.length; i++) {
 
   // create first div here
   let commentContainer = document.createElement("div");
@@ -82,7 +90,7 @@ for(i=0; i<commentArray.length; i++) {
   let titleName = document.createElement("div");
   titleName.className = "title__name";
   commentTitle.appendChild(titleName);
-  titleName.innerHTML = commentArray[i].name;
+  titleName.innerHTML = array[i].name;
 
   // get current date
   // let today = new Date();
@@ -92,12 +100,12 @@ for(i=0; i<commentArray.length; i++) {
   let titleDate = document.createElement("div");
   titleDate.className = "title__date";
   commentTitle.appendChild(titleDate);
-  titleDate.innerHTML = commentArray[i].date;
+  titleDate.innerHTML = array[i].date;
 
   let newComment = document.createElement("div");
   newComment.className = "title__comment";
   commentSubContainer.appendChild(newComment);
-  newComment.innerHTML = commentArray[i].comment;
+  newComment.innerHTML = array[i].comment;
 }
 
 
@@ -105,3 +113,64 @@ for(i=0; i<commentArray.length; i++) {
 document.querySelectorAll('.textArea')[0].value = "";
 document.querySelectorAll('.textArea')[1].value = "";
 }
+
+
+// ***********************Axios
+// / axios
+    //  .get("https://project-1-api.herokuapp.com/comments?api_key=EYTDH")
+//   .then(axioResponse => {
+//     // console.log (axioResponse.data);
+//     let res = axioResponse.data;
+//    console.log(res);
+//     console.log(res.map(item => item.name));
+//   })
+//   .catch (err => {
+//     alert('this is an error:'+ err.message);
+//   });
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function getData(){
+//   axios
+//   .get("https://project-1-api.herokuapp.com/comments?api_key=luyao")
+//   .then(response => {
+//     let comment = response.data;
+
+//   })
+
+// }
+
+
+
+
+
+
+// getData();
+
+// function postData (comment) {
+//     axios
+//     .post(url, comment)
+//     .then(result => {
+//         getData(result)
+//     })
+//     .catch (err => {
+//         alert('this is an error:'+ err.message);
+//       })
+// }
