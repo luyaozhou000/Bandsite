@@ -21,15 +21,26 @@
 //       "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!"
 //   }
 // ];
-
+// ******************** retrive comments from URL and display on the page:
+function getAxios() {
 axios
   .get("https://project-1-api.herokuapp.com/comments?api_key=luyao")
   .then(response => {
     console.log(response);
-    let comment = response.data;
-    createComment(comment);
-
+    let commentArray = response.data;
+    console.log(commentArray);
+    
+    createComment(commentArray);
+  
   })
+  .catch(err => {
+    alert('Server Error:' + err.message);
+    console.error(err);
+  });
+}
+
+getAxios();
+
 
 let formEl = document.querySelector(".homepage__comments--input");
 formEl.addEventListener("submit", handleFeedbackSubmission);
@@ -41,25 +52,34 @@ formEl.addEventListener("submit", handleFeedbackSubmission);
 function handleFeedbackSubmission(eventObject) {
   eventObject.preventDefault();
 
-  //   store entered values in variables:they are strings
+  // store entered values in variables:they are strings
   let name = eventObject.target.userName.value;
   let comment = eventObject.target.userComment.value;
-
   let today = new Date();
-// using .unshift to add the new object which contains entered name and comment to the beginning of the array:
-commentArray.unshift(
-  {
-    name: name, 
-    date: today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear(),
-    comment: comment
-  }
-  );
 
-  // calling createComment function
-  createComment();
+// using .unshift to add the new object which contains entered name and comment to the beginning of the array:
+// let newArray = [];
+// newArray.unshift(
+//   {
+//     name: name, 
+//     date: today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear(),
+//     comment: comment
+//   }
+//   );
+
+// ************* Axios .POST ----sending new comments to the server
+  axios.post("https://project-1-api.herokuapp.com/comments?api_key=luyao", {
+    name: name, 
+    // date: today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear(),
+    comment: comment
+  })
+  .then( request => {
+    getAxios();
+  });
+ 
 }
 
-// *****************************************
+// **************************************** display comments on the page:
 // get the parent element, then need to append new divs
 let mainContainer = document.querySelector(".homepage__comments--default");
 let commentDefault = document.querySelector(".homepage__comments--default");
@@ -68,7 +88,7 @@ function createComment(array) {
   // this clears three comments:
   commentDefault.innerHTML = "";
 
-for(i=0; i<array.length; i++) {
+for(i=array.length - 1; i >=0; i = i -1) {
 
   // create first div here
   let commentContainer = document.createElement("div");
@@ -97,10 +117,16 @@ for(i=0; i<array.length; i++) {
   // let date =
   //   today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear();
 
+
   let titleDate = document.createElement("div");
   titleDate.className = "title__date";
   commentTitle.appendChild(titleDate);
-  titleDate.innerHTML = array[i].date;
+
+  let d = new Date(array[i].timestamp);
+  console.log(d);
+  let date = d.getMonth() + 1 + "/" + d.getDate() + "/" + d.getFullYear();
+
+  titleDate.innerHTML = date;
 
   let newComment = document.createElement("div");
   newComment.className = "title__comment";
@@ -113,6 +139,17 @@ for(i=0; i<array.length; i++) {
 document.querySelectorAll('.textArea')[0].value = "";
 document.querySelectorAll('.textArea')[1].value = "";
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 // ***********************Axios
@@ -129,8 +166,6 @@ document.querySelectorAll('.textArea')[1].value = "";
 //   });
 
 
-
-  
 
 
 
