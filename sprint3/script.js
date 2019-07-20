@@ -21,12 +21,14 @@
 //       "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!"
 //   }
 // ];
-// ******************** retrive comments from URL and display on the page:
+// ******************** retrive comments from URL and display on the page
+// we declare a function to run  Axios:
 function getAxios() {
 axios
   .get("https://project-1-api.herokuapp.com/comments?api_key=luyao")
   .then(response => {
     console.log(response);
+    // fetch array and store it in commentArray:
     let commentArray = response.data;
     console.log(commentArray);
     
@@ -115,13 +117,14 @@ for(i=array.length - 1; i >=0; i = i -1) {
   // get current date
   // let today = new Date();
   // let date =
-  //   today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear();
+  // today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear();
 
 
   let titleDate = document.createElement("div");
   titleDate.className = "title__date";
   commentTitle.appendChild(titleDate);
 
+  
   let d = new Date(array[i].timestamp);
   console.log(d);
   let date = d.getMonth() + 1 + "/" + d.getDate() + "/" + d.getFullYear();
