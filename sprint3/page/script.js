@@ -1,3 +1,4 @@
+// STEP 1: retrieve data from URL and store it in showsArray; call createShows function;
 
 function getAxios() {
      axios
@@ -20,9 +21,8 @@ function getAxios() {
      getAxios();
 
 
-     // ************** fetch values
+     // STEP 2: Loop through showsArray: create DOM elements and display them in the page;
      let mainContainer = document.querySelector('.homepage__shows');
-
 
      function createShows(array) {
         for (let i = 0; i < array.length; i++) {
@@ -61,7 +61,6 @@ function getAxios() {
            locationText.className = "venue-text";
            locationText.innerHTML = array[i].location;
            showsContainer.appendChild(locationText);
-
 
            let button = document.createElement('button');
            button.className = "card-button";
