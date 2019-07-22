@@ -344,7 +344,7 @@ iframe {
     width: 31%;
   }
   .homepage__shows--hide .venue {
-    width: 25%;
+    width: 20%;
   }
 }
 
@@ -363,7 +363,7 @@ iframe {
     width: 25%;
   }
   .homepage__shows--hide .venue {
-    width: 16%;
+    width: 25%;
   }
 }
 
@@ -445,14 +445,14 @@ iframe {
 
 @media (min-width: 768px) and (max-width: 1439px) {
   .homepage__shows--card .venue-text {
-    width: 25%;
+    width: 20%;
     padding: 0;
   }
 }
 
 @media (min-width: 1440px) {
   .homepage__shows--card .venue-text {
-    width: 16%;
+    width: 25%;
     font-family: 'Avenir-bold';
   }
 }
